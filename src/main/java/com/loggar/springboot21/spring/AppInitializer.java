@@ -1,4 +1,4 @@
-package com.loggar.sprngboot21.spring;
+package com.loggar.springboot21.spring;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;

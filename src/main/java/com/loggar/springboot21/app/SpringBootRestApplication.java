@@ -1,4 +1,4 @@
-package com.loggar.sprngboot21.app;
+package com.loggar.springboot21.app;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
