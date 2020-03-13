@@ -1,4 +1,4 @@
-package com.loggar.springboot21.spring;
+package com.loggar.rest_example.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
