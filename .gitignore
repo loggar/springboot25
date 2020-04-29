@@ -6,5 +6,5 @@
 /build/
 /target/
 
-/WebContent/WEB-INF/classes
-/WebContent/WEB-INF/lib
+/webapp/WEB-INF/classes
+/webapp/WEB-INF/lib

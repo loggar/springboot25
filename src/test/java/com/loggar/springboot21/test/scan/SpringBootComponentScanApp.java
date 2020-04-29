@@ -1,4 +1,4 @@
-package com.loggar.test.scan;
+package com.loggar.springboot21.test.scan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

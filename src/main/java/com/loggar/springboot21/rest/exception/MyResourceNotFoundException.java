@@ -1,4 +1,4 @@
-package com.loggar.rest_example.exception;
+package com.loggar.springboot21.rest.exception;
 
 public final class MyResourceNotFoundException extends RuntimeException {
 	/**

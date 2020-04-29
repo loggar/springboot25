@@ -1,8 +1,8 @@
-package com.loggar.test.scan;
+package com.loggar.springboot21.test.scan;
 
 import org.springframework.stereotype.Component;
 
 @Component
-public class Dog {
+public class Cat {
 
 }

@@ -1,12 +1,11 @@
-package com.loggar.rest_example.app;
+package com.loggar.springboot21.web;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringBootRestApplication {
-
+public class SpringBootApplicationMain {
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootRestApplication.class, args);
+		SpringApplication.run(SpringBootApplicationMain.class, args);
 	}
 }

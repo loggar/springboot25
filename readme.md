@@ -8,3 +8,14 @@
 - tomcat 9.0
 - junit 5.0
 
+
+## Run application
+
+```
+$ mvn clean package spring-boot:repackage
+$ java -jar target/spring-boot-ops.war
+```
+
+```
+$ mvn spring-boot:run
+```

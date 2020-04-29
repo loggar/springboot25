@@ -1,4 +1,4 @@
-package com.loggar.rest_example.config;
+package com.loggar.springboot21.web.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -13,12 +13,12 @@ public class AppInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
 		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-		context.scan("com.loggar.springboot21");
+		context.scan("com.loggar.springboot21.web");
 		container.addListener(new ContextLoaderListener(context));
 
 		ServletRegistration.Dynamic dispatcher = container.addServlet("mvc", new DispatcherServlet(context));
 		dispatcher.setLoadOnStartup(1);
-		dispatcher.addMapping("/");
+		dispatcher.addMapping("/springboot21");
 	}
 }
 
@@ -27,7 +27,7 @@ public class AppInitializer implements WebApplicationInitializer {
  * 
  * Finally, we’re defining the entry point for the web application – the DispatcherServlet.
  * 
- * This class can entirely replace the web.xml file from <3.0 Servlet versions.
+ * This class can entirely replace the web.xml file from < 3.0 Servlet versions.
  */
 
 // web.xml dispatchers(entry points) equivalent
@@ -46,5 +46,5 @@ public class AppInitializer implements WebApplicationInitializer {
 //
 // <servlet-mapping>
 // <servlet-name>dispatcher</servlet-name>
-// <url-pattern>/</url-pattern>
+// <url-pattern>/springboot21</url-pattern>
 // </servlet-mapping>

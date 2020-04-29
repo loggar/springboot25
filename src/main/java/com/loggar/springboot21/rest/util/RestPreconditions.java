@@ -1,6 +1,6 @@
-package com.loggar.rest_example.util;
+package com.loggar.springboot21.rest.util;
 
-import com.loggar.rest_example.exception.MyResourceNotFoundException;
+import com.loggar.springboot21.rest.exception.MyResourceNotFoundException;
 
 public class RestPreconditions {
 	private RestPreconditions() {
