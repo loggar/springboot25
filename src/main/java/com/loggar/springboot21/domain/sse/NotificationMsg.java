@@ -15,7 +15,7 @@ public class NotificationMsg {
 	@Override
 	public String toString() {
 		StringBuilder builder = new StringBuilder();
-		builder.append("NotificationMessage [title=").append(title).append(", count=").append(count).append(", desc=").append(desc).append("]");
+		builder.append("NotificationMsg [title=").append(title).append(", count=").append(count).append(", desc=").append(desc).append("]");
 		return builder.toString();
 	}
 

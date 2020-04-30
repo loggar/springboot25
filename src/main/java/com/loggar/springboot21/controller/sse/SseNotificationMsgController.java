@@ -33,14 +33,14 @@ public class SseNotificationMsgController {
 	}
 
 	@EventListener
-	public void onNotificationMessage(NotificationMsg notificationMessage) {
+	public void onNotificationMsg(NotificationMsg notificationMsg) {
 		List<SseEmitter> deadEmitters = new ArrayList<>();
 
 		System.out.println("[log] emitters: " + this.emitters.size());
 
 		this.emitters.forEach(emitter -> {
 			try {
-				emitter.send(notificationMessage);
+				emitter.send(notificationMsg);
 			} catch (Exception e) {
 				deadEmitters.add(emitter);
 				System.out.println("[log] dead emitters: " + this.emitters);

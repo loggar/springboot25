@@ -14,10 +14,10 @@ public class NotificationMsgPublisher {
 	}
 
 	public void publish(String title, int count, String desc) {
-		NotificationMsg notificationMessage = new NotificationMsg(title, count, desc);
+		NotificationMsg notificationMsg = new NotificationMsg(title, count, desc);
 
-		System.out.println("[log] Service NotificationMessagePublisher publishEvent: " + notificationMessage);
+		System.out.println("[log] Service NotificationMsgPublisher publishEvent: " + notificationMsg);
 
-		this.eventPublisher.publishEvent(notificationMessage);
+		this.eventPublisher.publishEvent(notificationMsg);
 	}
 }
