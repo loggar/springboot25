@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web.publisher;
+package com.loggar.springboot21.service.publisher;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;

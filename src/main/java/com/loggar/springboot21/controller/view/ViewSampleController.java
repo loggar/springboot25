@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web.controller;
+package com.loggar.springboot21.controller.view;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;

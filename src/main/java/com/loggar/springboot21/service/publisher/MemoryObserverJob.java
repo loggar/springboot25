@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web.publisher;
+package com.loggar.springboot21.service.publisher;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;

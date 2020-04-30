@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web.config;
+package com.loggar.springboot21.config;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
@@ -11,7 +11,7 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc // <mvc:annotation-driven />
-@ComponentScan(basePackages = "com.loggar.springboot21.web.controller") // <context:component-scan base-package="com.loggar.springboot21.controllerr" />
+@ComponentScan(basePackages = "com.loggar.springboot21.controller") // <context:component-scan base-package="com.loggar.springboot21.controller" />
 public class WebAppConfig implements WebMvcConfigurer {
 	@Bean
 	public ViewResolver internalResourceViewResolver() {

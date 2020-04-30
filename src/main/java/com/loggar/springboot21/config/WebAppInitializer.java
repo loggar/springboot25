@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web.config;
+package com.loggar.springboot21.config;
 
 import javax.servlet.ServletContext;
 import javax.servlet.ServletException;
@@ -13,7 +13,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
 		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-		context.scan("com.loggar.springboot21.web.publisher");
+		context.scan("com.loggar.springboot21.service.publisher");
 		container.addListener(new ContextLoaderListener(context));
 
 		ServletRegistration.Dynamic dispatcher = container.addServlet("mvc", new DispatcherServlet(context));

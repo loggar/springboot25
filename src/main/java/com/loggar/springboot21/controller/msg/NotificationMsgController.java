@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web.controller;
+package com.loggar.springboot21.controller.msg;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.loggar.springboot21.web.publisher.NotificationMsgPublisher;
+import com.loggar.springboot21.service.publisher.NotificationMsgPublisher;
 
 @Controller
 @RequestMapping("/notification-message")

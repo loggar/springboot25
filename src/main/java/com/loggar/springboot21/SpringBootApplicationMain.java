@@ -1,4 +1,4 @@
-package com.loggar.springboot21.web;
+package com.loggar.springboot21;
 
 import java.util.Arrays;
 
