@@ -13,7 +13,7 @@ public class WebAppInitializer implements WebApplicationInitializer {
 	@Override
 	public void onStartup(ServletContext container) throws ServletException {
 		AnnotationConfigWebApplicationContext context = new AnnotationConfigWebApplicationContext();
-		context.scan("com.loggar.springboot21.web.service");
+		context.scan("com.loggar.springboot21.web.publisher");
 		container.addListener(new ContextLoaderListener(context));
 
 		ServletRegistration.Dynamic dispatcher = container.addServlet("mvc", new DispatcherServlet(context));

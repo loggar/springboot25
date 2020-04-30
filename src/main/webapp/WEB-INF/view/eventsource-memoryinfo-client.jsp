@@ -4,7 +4,7 @@
 <title>Server Memory Monitor</title>
 <script>
 function initialize() {
-	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/memory';
+	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/subscribe-memory';
 	const eventSource = new EventSource(eventSourceUrl);
 
 	eventSource.onmessage = e => {
@@ -27,8 +27,8 @@ function initialize() {
 	};
 	
 	eventSource.addEventListener('second', function(e) {
-			console.log('second', e.data);
-		}, false);	
+		console.log('second', e.data);
+	}, false);
 }
 
 window.onload = initialize;
