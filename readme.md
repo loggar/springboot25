@@ -20,14 +20,22 @@ $ java -jar target/spring-boot-ops.war
 $ mvn spring-boot:run
 ```
 
+## Shutdown application
+
+```
+curl -X POST localhost:<port>/<context-path>/shutdownContext
+
+curl -X POST localhost:26080/springboot21/shutdownContext
+```
+
 ## SSE connection example
 
 ```
-http://localhost:26080/springboot21/sample/eventsource-notification-client
+http://localhost:<port>/<context-path>/sample/eventsource-notification-client
 ```
 
 Sample Trig SSE
 
 ```
-$ curl http://localhost:26080/springboot21/notification-message/trig?count=100
+$ curl http://localhost:<port>/<context-path>/notification-message/trig?count=100
 ```
