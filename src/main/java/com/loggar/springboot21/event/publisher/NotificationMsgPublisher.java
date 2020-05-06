@@ -1,4 +1,4 @@
-package com.loggar.springboot21.service.publisher;
+package com.loggar.springboot21.event.publisher;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
@@ -13,11 +13,8 @@ public class NotificationMsgPublisher {
 		this.eventPublisher = eventPublisher;
 	}
 
-	public void publish(String title, int count, String desc) {
-		NotificationMsg notificationMsg = new NotificationMsg(title, count, desc);
-
+	public void publish(NotificationMsg notificationMsg) {
 		System.out.println("[log] Service NotificationMsgPublisher publishEvent: " + notificationMsg);
-
 		this.eventPublisher.publishEvent(notificationMsg);
 	}
 }

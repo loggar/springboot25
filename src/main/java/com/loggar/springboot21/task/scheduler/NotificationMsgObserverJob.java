@@ -1,4 +1,4 @@
-package com.loggar.springboot21.service.publisher;
+package com.loggar.springboot21.task.scheduler;
 
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.scheduling.annotation.Scheduled;

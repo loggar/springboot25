@@ -16,7 +16,7 @@ import com.loggar.springboot21.domain.sse.NotificationMsg;
 
 @Controller
 @RequestMapping("/notification-message")
-public class SseNotificationMsgController {
+public class NotificationMsgSseController {
 	private final CopyOnWriteArrayList<SseEmitter> emitters = new CopyOnWriteArrayList<>();
 
 	@GetMapping("/subscribe")

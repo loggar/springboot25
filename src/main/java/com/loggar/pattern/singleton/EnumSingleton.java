@@ -1,7 +1,8 @@
 package com.loggar.pattern.singleton;
 
 import com.loggar.springboot21.bean.util.BeanUtil;
-import com.loggar.springboot21.service.publisher.NotificationMsgPublisher;
+import com.loggar.springboot21.domain.sse.NotificationMsg;
+import com.loggar.springboot21.event.publisher.NotificationMsgPublisher;
 
 public enum EnumSingleton {
 	/*
@@ -26,7 +27,8 @@ public enum EnumSingleton {
 	 */
 	public void trigNotificationMsg(int count) {
 		NotificationMsgPublisher notificationMsgPublisher = BeanUtil.getBean(NotificationMsgPublisher.class);
-		notificationMsgPublisher.publish("notificationA1", count, "Notification Description");
+		NotificationMsg notificationMsg = new NotificationMsg("notificationA1", count, "Notification Description");
+		notificationMsgPublisher.publish(notificationMsg);
 	}
 
 	public String getInfo() {

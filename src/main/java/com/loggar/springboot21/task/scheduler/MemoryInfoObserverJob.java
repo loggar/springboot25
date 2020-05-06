@@ -1,4 +1,4 @@
-package com.loggar.springboot21.service.publisher;
+package com.loggar.springboot21.task.scheduler;
 
 import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;

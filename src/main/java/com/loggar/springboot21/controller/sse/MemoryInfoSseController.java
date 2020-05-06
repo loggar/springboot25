@@ -16,7 +16,7 @@ import com.loggar.springboot21.domain.sse.MemoryInfo;
 
 @Controller
 @RequestMapping("/notification-memory")
-public class SseMemoryInfoController {
+public class MemoryInfoSseController {
 	private final CopyOnWriteArrayList<SseEmitter> emitters = new CopyOnWriteArrayList<>();
 
 	@GetMapping("/subscribe")
