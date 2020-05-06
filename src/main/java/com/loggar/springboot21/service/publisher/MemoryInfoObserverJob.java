@@ -11,10 +11,10 @@ import org.springframework.stereotype.Service;
 import com.loggar.springboot21.domain.sse.MemoryInfo;
 
 @Service
-public class MemoryObserverJob {
+public class MemoryInfoObserverJob {
 	public final ApplicationEventPublisher eventPublisher;
 
-	public MemoryObserverJob(ApplicationEventPublisher eventPublisher) {
+	public MemoryInfoObserverJob(ApplicationEventPublisher eventPublisher) {
 		this.eventPublisher = eventPublisher;
 	}
 
