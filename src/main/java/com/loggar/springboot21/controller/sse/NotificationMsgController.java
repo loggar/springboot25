@@ -1,4 +1,4 @@
-package com.loggar.springboot21.controller.msg;
+package com.loggar.springboot21.controller.sse;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

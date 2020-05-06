@@ -18,16 +18,16 @@ public class MemoryObserverJob {
 		this.eventPublisher = eventPublisher;
 	}
 
-	@Scheduled(fixedRate = 10000)
+	@Scheduled(fixedRate = 60000)
 	public void doSomething() {
 		MemoryMXBean memBean = ManagementFactory.getMemoryMXBean();
 		MemoryUsage heap = memBean.getHeapMemoryUsage();
 		MemoryUsage nonHeap = memBean.getNonHeapMemoryUsage();
 
 		MemoryInfo mi = new MemoryInfo(heap.getUsed(), nonHeap.getUsed());
-		
+
 		System.out.println("[log] Schedule MemoryObserverJob publishEvent: " + mi);
-		
+
 		this.eventPublisher.publishEvent(mi);
 	}
 }

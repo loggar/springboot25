@@ -9,15 +9,17 @@ import javax.servlet.http.HttpServletResponse;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
 
 import com.loggar.springboot21.domain.sse.NotificationMsg;
 
 @Controller
+@RequestMapping("/notification-message")
 public class SseNotificationMsgController {
 	private final CopyOnWriteArrayList<SseEmitter> emitters = new CopyOnWriteArrayList<>();
 
-	@GetMapping("/subscribe-notification-message")
+	@GetMapping("/subscribe")
 	public SseEmitter handle(HttpServletResponse response) {
 		response.setHeader("Cache-Control", "no-store");
 

@@ -4,7 +4,7 @@
 <title>Notification Msg Monitor</title>
 <script>
 function initialize() {
-	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/subscribe-notification-message';
+	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/notification-message/subscribe';
 	const eventSource = new EventSource(eventSourceUrl);
 
 	eventSource.onmessage = e => {

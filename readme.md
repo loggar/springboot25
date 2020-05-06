@@ -31,11 +31,17 @@ curl -X POST localhost:26080/springboot21/shutdownContext
 ## SSE connection example
 
 ```
+http://localhost:<port>/<context-path>/sample/eventsource-memoryinfo-client
+
 http://localhost:<port>/<context-path>/sample/eventsource-notification-client
+
+http://localhost:26080/springboot21/sample/eventsource-notification-client
 ```
 
 Sample Trig SSE
 
 ```
 $ curl http://localhost:<port>/<context-path>/notification-message/trig?count=100
+
+$ curl http://localhost:26080/springboot21/notification-message/trig?count=100
 ```

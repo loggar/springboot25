@@ -4,7 +4,7 @@
 <title>Server Memory Monitor</title>
 <script>
 function initialize() {
-	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/subscribe-memory';
+	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/notification-memory/subscribe';
 	const eventSource = new EventSource(eventSourceUrl);
 
 	eventSource.onmessage = e => {
