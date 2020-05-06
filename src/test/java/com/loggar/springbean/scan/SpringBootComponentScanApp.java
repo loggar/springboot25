@@ -1,8 +1,9 @@
-package com.loggar.springboot21.test.scan;
+package com.loggar.springbean.scan;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
@@ -17,6 +18,7 @@ public class SpringBootComponentScanApp {
 	public static void main(String[] args) {
 		applicationContext = SpringApplication.run(SpringBootComponentScanApp.class, args);
 		checkBeansPresence("cat", "dog", "rose", "exampleBean", "springBootComponentScanApp");
+		((ConfigurableApplicationContext) applicationContext).close();
 
 	}
 
