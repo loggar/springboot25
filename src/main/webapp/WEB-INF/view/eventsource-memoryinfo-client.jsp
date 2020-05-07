@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Server Memory Monitor</title>
+<title>Springboot21 - Server Memory Monitor</title>
 <script>
 function initialize() {
-	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/notification-memory/subscribe';
+	// var eventSourceUrl = window.location.protocol +"//" + window.location.host + "${pageContext.request.contextPath}/notification-memory/subscribe";
+	var "${pageContext.request.contextPath}/notification-memory/subscribe";
 	const eventSource = new EventSource(eventSourceUrl);
 
 	eventSource.onmessage = e => {
@@ -15,19 +16,19 @@ function initialize() {
 		document.getElementById("nonheap").innerHTML = msg.nonHeap;
 	};
 	
-	eventSource.onopen = e => console.log('open');
+	eventSource.onopen = e => console.log("open");
 
 	eventSource.onerror = e => {
 		if (e.readyState == EventSource.CLOSED) {
-			console.log('close');
+			console.log("close");
 		}
 		else {
 			console.log(e);
 		}
 	};
 	
-	eventSource.addEventListener('second', function(e) {
-		console.log('second', e.data);
+	eventSource.addEventListener("second", function(e) {
+		console.log("second", e.data);
 	}, false);
 }
 
@@ -35,7 +36,7 @@ window.onload = initialize;
 </script>
 </head>
 <body>
-	<h1>Memory Observer</h1>
+	<h1>EventSource Memory-Info Subscriber</h1>
 	<h3>Timestamp</h3>
 	<div id="timestamp"></div>
 	<h3>Heap Memory Usage</h3>

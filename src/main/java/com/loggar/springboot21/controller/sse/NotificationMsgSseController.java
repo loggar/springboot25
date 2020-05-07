@@ -1,11 +1,14 @@
 package com.loggar.springboot21.controller.sse;
 
+import java.lang.invoke.MethodHandles;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.servlet.http.HttpServletResponse;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -17,6 +20,8 @@ import com.loggar.springboot21.domain.sse.NotificationMsg;
 @Controller
 @RequestMapping("/notification-message")
 public class NotificationMsgSseController {
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+
 	private final CopyOnWriteArrayList<SseEmitter> emitters = new CopyOnWriteArrayList<>();
 
 	@GetMapping("/subscribe")
@@ -30,7 +35,7 @@ public class NotificationMsgSseController {
 		emitter.onCompletion(() -> this.emitters.remove(emitter));
 		emitter.onTimeout(() -> this.emitters.remove(emitter));
 
-		System.out.println("[log] new emitter: " + emitter);
+		logger.debug("New emitter: {}", emitter);
 		return emitter;
 	}
 
@@ -38,14 +43,14 @@ public class NotificationMsgSseController {
 	public void onNotificationMsg(NotificationMsg notificationMsg) {
 		List<SseEmitter> deadEmitters = new ArrayList<>();
 
-		System.out.println("[log] emitters: " + this.emitters.size());
+		logger.debug("Emitters: {}", this.emitters.size());
 
 		this.emitters.forEach(emitter -> {
 			try {
 				emitter.send(notificationMsg);
 			} catch (Exception e) {
 				deadEmitters.add(emitter);
-				System.out.println("[log] dead emitters: " + this.emitters);
+				logger.debug("Dead emitters: {}", this.emitters);
 			}
 		});
 

@@ -1,5 +1,9 @@
 package com.loggar.springbean.scan;
 
+import java.lang.invoke.MethodHandles;
+
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
@@ -8,6 +12,8 @@ import org.springframework.context.annotation.Bean;
 
 @SpringBootApplication
 public class SpringBootComponentScanApp {
+	private static final Logger logger = LoggerFactory.getLogger(MethodHandles.lookup().lookupClass());
+
 	private static ApplicationContext applicationContext;
 
 	@Bean
@@ -24,7 +30,7 @@ public class SpringBootComponentScanApp {
 
 	private static void checkBeansPresence(String... beans) {
 		for (String beanName : beans) {
-			System.out.println("Is " + beanName + " in ApplicationContext: " + applicationContext.containsBean(beanName));
+			logger.debug("{} in ApplicationContext: {}", applicationContext.containsBean(beanName));
 		}
 	}
 }

@@ -20,7 +20,7 @@ public class NotificationMsgController {
 	@RequestMapping(value = "/trig", method = { RequestMethod.POST, RequestMethod.GET })
 	@ResponseBody
 	public String trig(@RequestParam int count) {
-		NotificationMsg notificationMsg = new NotificationMsg("notificationA1", count, "Notification Description");
+		NotificationMsg notificationMsg = new NotificationMsg(this.getClass().getName(), count, "Notification Description");
 		notificationMsgPublisher.publish(notificationMsg);
 		return "done";
 	}

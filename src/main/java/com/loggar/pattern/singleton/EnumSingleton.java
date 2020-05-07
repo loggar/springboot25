@@ -27,7 +27,7 @@ public enum EnumSingleton {
 	 */
 	public void trigNotificationMsg(int count) {
 		NotificationMsgPublisher notificationMsgPublisher = BeanUtil.getBean(NotificationMsgPublisher.class);
-		NotificationMsg notificationMsg = new NotificationMsg("notificationA1", count, "Notification Description");
+		NotificationMsg notificationMsg = new NotificationMsg(this.getClass().getName(), count, "Notification Description");
 		notificationMsgPublisher.publish(notificationMsg);
 	}
 

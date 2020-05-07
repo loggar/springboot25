@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Notification Msg Monitor</title>
+<title>Springboot21 - EventSource</title>
 <script>
 function initialize() {
-	var eventSourceUrl = window.location.protocol +"//" + window.location.host + '${pageContext.request.contextPath}/notification-message/subscribe';
+	// var eventSourceUrl = window.location.protocol +"//" + window.location.host + "${pageContext.request.contextPath}/notification-message/subscribe";
+	var eventSourceUrl = "${pageContext.request.contextPath}/notification-message/subscribe";
 	const eventSource = new EventSource(eventSourceUrl);
 
 	eventSource.onmessage = e => {
@@ -15,27 +16,23 @@ function initialize() {
 		document.getElementById("desc").innerHTML = msg.desc;
 	};
 	
-	eventSource.onopen = e => console.log('open');
+	eventSource.onopen = e => console.log("open");
 
 	eventSource.onerror = e => {
 		if (e.readyState == EventSource.CLOSED) {
-			console.log('close');
+			console.log("close");
 		}
 		else {
 			console.log(e);
 		}
 	};
-	
-	eventSource.addEventListener('second', function(e) {
-		console.log('second', e.data);
-	}, false);
 }
 
 window.onload = initialize;
 </script>
 </head>
 <body>
-	<h1>Notification Message Subscriber</h1>
+	<h1>EventSource Notification-Message Subscriber</h1>
 	<h3>title</h3>
 	<div id="title"></div>
 	<h3>count</h3>
