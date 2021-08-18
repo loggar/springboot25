@@ -9,7 +9,7 @@ Run Maven build `mvn spring-boot:run` will shutdown its actuator port when it is
 However, run `mvn spring-boot:run` on Eclipse IDE does not exit its actuator port when it is terminated on the IDE.
 
 ```
-# Embeded Tomcat is running on Eclipse IDE and terminated on the console
+# Embed Tomcat is running on Eclipse IDE and terminated on the console
 
 $ netstat -ano | findstr :26080
 
