@@ -30,7 +30,7 @@ public class SpringBootComponentScanApp {
 
 	private static void checkBeansPresence(String... beans) {
 		for (String beanName : beans) {
-			logger.debug("{} in ApplicationContext: {}", applicationContext.containsBean(beanName));
+			logger.debug("{} in ApplicationContext: {}", beanName, applicationContext.containsBean(beanName));
 		}
 	}
 }
