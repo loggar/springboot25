@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Springboot21</title>
+<title>springboot25</title>
 <script>
 function initialize() {
 	// var eventSourceUrl = window.location.protocol +"//" + window.location.host + "${pageContext.request.contextPath}/sampleJob/subscribe";

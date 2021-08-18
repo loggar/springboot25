@@ -1,8 +1,8 @@
 package com.loggar.pattern.singleton;
 
-import com.loggar.springboot21.bean.util.BeanUtil;
-import com.loggar.springboot21.domain.sse.NotificationMsg;
-import com.loggar.springboot21.event.publisher.NotificationMsgPublisher;
+import com.loggar.springboot25.bean.util.BeanUtil;
+import com.loggar.springboot25.domain.sse.NotificationMsg;
+import com.loggar.springboot25.event.publisher.NotificationMsgPublisher;
 
 public enum EnumSingleton {
 	/*

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Springboot21 - EventSource</title>
+<title>springboot25 - EventSource</title>
 <script>
 function initialize() {
 	// var eventSourceUrl = window.location.protocol +"//" + window.location.host + "${pageContext.request.contextPath}/notification-message/subscribe";

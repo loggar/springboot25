@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Springboot21 - Server Memory Monitor</title>
+<title>springboot25 - Server Memory Monitor</title>
 <script>
 function initialize() {
 	// var eventSourceUrl = window.location.protocol +"//" + window.location.host + "${pageContext.request.contextPath}/notification-memory/subscribe";
