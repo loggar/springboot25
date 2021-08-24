@@ -1,0 +1,39 @@
+GET http://localhost:26080/springboot25/students HTTP/1.1
+
+###
+
+GET http://localhost:26080/springboot25/students/1 HTTP/1.1
+
+###
+
+POST http://localhost:26080/springboot25/students HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Bill",
+    "lastName": "Gates",
+    "year": "Freshman"
+}
+
+###
+
+PUT http://localhost:26080/springboot25/students/1 HTTP/1.1
+content-type: application/json
+
+{
+    "firstName": "Jane",
+    "lastName": "Eyre",
+    "year": "Junior"
+}
+
+###
+
+DELETE http://localhost:26080/springboot25/students/4 HTTP/1.1
+
+###
+
+GET http://localhost:26080/springboot25/students/9999999
+
+# "status": 404, "error": "Not Found", "error": "Not Found",
+
+###
