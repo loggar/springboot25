@@ -26,12 +26,3 @@ curl -X POST localhost:<port>/<context-path>/shutdownContext
 
 curl -X POST localhost:26080/springboot25/shutdownContext
 ```
-
-## Views
-
-### jsp
-
-```
-index page localhost:26080/springboot25/
-other page localhost:26080/springboot25/other
-```
