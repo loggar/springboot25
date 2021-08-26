@@ -1,7 +1,7 @@
-package com.loggar.springboot25.bootstrap;
+package com.loggar.springboot25.app.bootstrap;
 
-import com.loggar.springboot25.model.Student;
-import com.loggar.springboot25.repository.StudentRepository;
+import com.loggar.springboot25.model.user.Student;
+import com.loggar.springboot25.repository.user.StudentRepository;
 
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;

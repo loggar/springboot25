@@ -21,7 +21,7 @@ public class SampleJobSseController {
 	public SseEmitter subscribe(HttpSession session) throws IOException {
 		SseEmitter emitter = new SseEmitter();
 
-		sampleJobPublisher.regist(session.getId(), emitter);
+		sampleJobPublisher.register(session.getId(), emitter);
 
 		return emitter;
 	}

@@ -2,12 +2,12 @@ package com.loggar.springboot25.event.publisher;
 
 import java.lang.invoke.MethodHandles;
 
+import com.loggar.springboot25.model.sse.NotificationMsg;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.stereotype.Service;
-
-import com.loggar.springboot25.domain.sse.NotificationMsg;
 
 @Service
 public class NotificationMsgPublisher {

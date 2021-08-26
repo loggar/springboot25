@@ -1,4 +1,4 @@
-package com.loggar.springboot25.bean.context;
+package com.loggar.springboot25.app.context;
 
 import java.lang.invoke.MethodHandles;
 

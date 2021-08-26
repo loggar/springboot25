@@ -1,8 +1,8 @@
 package com.loggar.springboot25.controller.student;
 
 import com.loggar.springboot25.exceptions.DataNotFoundException;
-import com.loggar.springboot25.model.Student;
-import com.loggar.springboot25.repository.StudentRepository;
+import com.loggar.springboot25.model.user.Student;
+import com.loggar.springboot25.repository.user.StudentRepository;
 
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;

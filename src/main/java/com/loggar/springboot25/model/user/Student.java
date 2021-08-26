@@ -1,4 +1,4 @@
-package com.loggar.springboot25.model;
+package com.loggar.springboot25.model.user;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

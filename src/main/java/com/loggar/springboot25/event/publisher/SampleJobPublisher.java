@@ -33,7 +33,7 @@ public class SampleJobPublisher {
 		}
 	}
 
-	public void regist(String key, SseEmitter emitter) {
+	public void register(String key, SseEmitter emitter) {
 		emitter.onCompletion(() -> {
 			logger.debug("Complete EMITTER {} {}", key, emitter);
 		});

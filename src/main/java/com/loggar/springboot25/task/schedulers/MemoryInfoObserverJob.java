@@ -5,13 +5,13 @@ import java.lang.management.ManagementFactory;
 import java.lang.management.MemoryMXBean;
 import java.lang.management.MemoryUsage;
 
+import com.loggar.springboot25.model.sse.MemoryInfo;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import com.loggar.springboot25.domain.sse.MemoryInfo;
 
 @Service
 public class MemoryInfoObserverJob {

@@ -8,7 +8,7 @@
   <url>http://maven.apache.org</url>
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-    <start-class>com.loggar.springboot25.app.SpringBootRestApplication</start-class>
+    <start-class>com.loggar.springboot25.app.main.SpringBootRestApplication</start-class>
     <java.version>11</java.version>
     <tomcat.version>9.0.52</tomcat.version>
     <springboot.version>2.5.3</springboot.version>

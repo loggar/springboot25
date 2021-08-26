@@ -1,8 +1,8 @@
 package com.loggar.springboot25.task.instances;
 
-import com.loggar.springboot25.bean.util.BeanUtil;
-import com.loggar.springboot25.domain.sse.NotificationMsg;
 import com.loggar.springboot25.event.publisher.NotificationMsgPublisher;
+import com.loggar.springboot25.model.sse.NotificationMsg;
+import com.loggar.springboot25.util.bean.BeanUtil;
 
 public enum NotificationMsgJobEnumSingleton {
   /*

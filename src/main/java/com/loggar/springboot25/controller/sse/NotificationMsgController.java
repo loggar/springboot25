@@ -7,8 +7,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-import com.loggar.springboot25.domain.sse.NotificationMsg;
 import com.loggar.springboot25.event.publisher.NotificationMsgPublisher;
+import com.loggar.springboot25.model.sse.NotificationMsg;
 
 @Controller
 @RequestMapping("/notification-message")

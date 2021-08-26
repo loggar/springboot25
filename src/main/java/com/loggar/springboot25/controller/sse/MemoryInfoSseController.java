@@ -7,6 +7,8 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import javax.servlet.http.HttpServletResponse;
 
+import com.loggar.springboot25.model.sse.MemoryInfo;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.context.event.EventListener;
@@ -14,8 +16,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.mvc.method.annotation.SseEmitter;
-
-import com.loggar.springboot25.domain.sse.MemoryInfo;
 
 @Controller
 @RequestMapping("/notification-memory")

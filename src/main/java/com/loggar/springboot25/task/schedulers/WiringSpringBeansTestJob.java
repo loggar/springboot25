@@ -1,9 +1,10 @@
 package com.loggar.springboot25.task.schedulers;
 
+
+import com.loggar.springboot25.util.bean.BeanUtilGetBeanUsage;
+
 import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
-
-import com.loggar.springboot25.bean.util.BeanUtilGetBeanUsage;
 
 @Service
 public class WiringSpringBeansTestJob {
